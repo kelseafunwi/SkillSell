@@ -1,0 +1,7 @@
+<svg id="clock_-_time" data-name="clock - time" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+  <path id="Path_575" data-name="Path 575" d="M7,1a6,6,0,1,0,6,6A6.007,6.007,0,0,0,7,1ZM3.294,11.06l.524-.524-.354-.354-.524.524A5.478,5.478,0,0,1,1.507,7.25H2.25v-.5H1.506A5.479,5.479,0,0,1,2.94,3.294l.524.524.353-.354L3.293,2.94A5.478,5.478,0,0,1,6.75,1.506V2.25h.5V1.506A5.479,5.479,0,0,1,10.706,2.94l-.524.524.354.353.524-.524A5.478,5.478,0,0,1,12.493,6.75H11.75v.5h.744a5.479,5.479,0,0,1-1.434,3.456l-.524-.524-.354.354.524.524a5.489,5.489,0,0,1-7.413,0Z" transform="translate(-1 -1)" fill="#3dadd9"/>
+  <path id="Path_576" data-name="Path 576" d="M23.628,15.738a.492.492,0,0,0-.128-.018.508.508,0,1,0,.482.372l2.445-2.445-.354-.354Z" transform="translate(-17.5 -10.22)" fill="#3dadd9"/>
+  <rect id="Rectangle_701" data-name="Rectangle 701" transform="translate(6 10)" fill="#3dadd9"/>
+  <rect id="Rectangle_702" data-name="Rectangle 702" width="1" transform="translate(7 10)" fill="#3dadd9"/>
+  <rect id="Rectangle_703" data-name="Rectangle 703" transform="translate(5 10)" fill="#3dadd9"/>
+</svg>

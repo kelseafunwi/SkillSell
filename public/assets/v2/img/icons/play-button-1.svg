@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41.043" height="41.043" viewBox="0 0 41.043 41.043">
+  <g id="pluy-button-1" transform="translate(2 2)">
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(0 0)" fill="rgba(0,0,0,0.62)" stroke="#fff" stroke-width="2">
+      <ellipse cx="18.522" cy="18.522" rx="18.522" ry="18.522" stroke="none"/>
+      <ellipse cx="18.522" cy="18.522" rx="19.522" ry="19.522" fill="none"/>
+    </g>
+    <path id="Polygon_2" data-name="Polygon 2" d="M7.056,0l7.056,12.045H0Z" transform="translate(27.92 11.245) rotate(90)" fill="#fff"/>
+  </g>
+</svg>

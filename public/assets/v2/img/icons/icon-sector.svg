@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_976" data-name="Rectangle 976" width="24" height="24" transform="translate(644 814)"/>
+    </clipPath>
+  </defs>
+  <g id="icon-sector" transform="translate(-644 -814)" clip-path="url(#clip-path)">
+    <g id="XMLID_1_" transform="translate(644 813.91)">
+      <path id="Path_1268" data-name="Path 1268" d="M14,9.09l8.81,1.75A1.477,1.477,0,0,1,24,12.3V22.5A1.5,1.5,0,0,1,22.5,24h-9a.5.5,0,0,0,.5-.5V23h8.5a.5.5,0,0,0,.5-.5V12.3a.5.5,0,0,0-.39-.49L14,10.11Z"/>
+      <path id="Path_1269" data-name="Path 1269" d="M19.5,14a.5.5,0,0,1,0,1h-2a.5.5,0,0,1,0-1Z"/>
+      <path id="Path_1270" data-name="Path 1270" d="M19.5,17a.5.5,0,0,1,0,1h-2a.5.5,0,0,1,0-1Z"/>
+      <path id="Path_1271" data-name="Path 1271" d="M19.5,20a.5.5,0,0,1,0,1h-2a.5.5,0,0,1,0-1Z"/>
+      <path id="Path_1272" data-name="Path 1272" d="M14,23.5a.5.5,0,0,1-1,0V9.5a.532.532,0,0,1,.18-.39.526.526,0,0,1,.42-.1l.4.08V23.5Z"/>
+      <path id="Path_1273" data-name="Path 1273" d="M13,23v.5a.5.5,0,0,0,.5.5h-4a.5.5,0,0,0,.5-.5V23Z"/>
+      <path id="Path_1274" data-name="Path 1274" d="M10.5,5a.5.5,0,0,1,0,1h-2a.5.5,0,0,1,0-1Z"/>
+      <path id="Path_1275" data-name="Path 1275" d="M11,8.5a.5.5,0,0,1-.5.5h-2a.5.5,0,0,1,0-1h2A.5.5,0,0,1,11,8.5Z"/>
+      <path id="Path_1276" data-name="Path 1276" d="M10.5,11a.5.5,0,0,1,0,1h-2a.5.5,0,0,1,0-1Z"/>
+      <path id="Path_1277" data-name="Path 1277" d="M10.5,14a.5.5,0,0,1,0,1h-2a.5.5,0,0,1,0-1Z"/>
+      <path id="Path_1278" data-name="Path 1278" d="M6,14.5a.5.5,0,0,1-.5.5h-2a.5.5,0,0,1,0-1h2A.5.5,0,0,1,6,14.5Z"/>
+      <path id="Path_1279" data-name="Path 1279" d="M5.5,5a.5.5,0,0,1,0,1h-2a.5.5,0,0,1,0-1Z"/>
+      <path id="Path_1280" data-name="Path 1280" d="M5.5,8a.5.5,0,0,1,0,1h-2a.5.5,0,0,1,0-1Z"/>
+      <path id="Path_1281" data-name="Path 1281" d="M5.5,11a.5.5,0,0,1,0,1h-2a.5.5,0,0,1,0-1Z"/>
+      <path id="Path_1282" data-name="Path 1282" d="M9,18.5a.5.5,0,0,0-.5-.5h-3a.5.5,0,0,0-.5.5V23H4V18.5A1.5,1.5,0,0,1,5.5,17h3A1.5,1.5,0,0,1,10,18.5V23H9Z"/>
+      <path id="Path_1283" data-name="Path 1283" d="M5,23h5v.5a.5.5,0,0,1-.5.5h-5a.5.5,0,0,1-.5-.5V23Z"/>
+      <path id="Path_1284" data-name="Path 1284" d="M1.75.2,12.74,1.87A1.494,1.494,0,0,1,14,3.35V9.09l-.4-.08a.526.526,0,0,0-.42.1A.532.532,0,0,0,13,9.5V3.35a.506.506,0,0,0-.42-.5L1.59,1.19a.277.277,0,0,0-.09-.01.472.472,0,0,0-.32.12A.478.478,0,0,0,1,1.68V22.5a.5.5,0,0,0,.5.5H4v.5a.5.5,0,0,0,.5.5h-3A1.5,1.5,0,0,1,0,22.5V1.68A1.472,1.472,0,0,1,.53.54,1.5,1.5,0,0,1,1.75.2Z"/>
+    </g>
+  </g>
+</svg>

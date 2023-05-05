@@ -14,11 +14,27 @@ return new class extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
+            $table->id()->autoIncrement();
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('occupation');
+            $table->string('slug')->nullable();
+            $table->string('profile')->nullable();
             $table->string('email')->unique();
+            $table->longText('about')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('role', ['activator', 'needer', 'admin']);
+            $table->string('date_of_birth');
+            $table->string('location');
+            $table->longText('aboutyou')->nullable();
+            $table->bigInteger('phone_id')->nullable();
+            $table->enum('status', ['pending', 'active', 'suspended', 'rejected'])->default('active');
+            $table->timestamp('last_seen')->nullable();
+            $table->unsignedBigInteger('city_id')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('linkedin')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

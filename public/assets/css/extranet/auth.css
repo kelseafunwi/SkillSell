@@ -1,0 +1,63 @@
+header {
+    overflow: hidden;
+}
+.header-top {
+    padding: 1rem 0 0;
+    margin-bottom: 1rem;
+}
+
+.header-top ~ .page-title {
+    margin-top: -1rem;
+}
+@media (min-width: 768px) {
+
+    .header-top {
+        padding: 2rem 0 0;
+        margin-bottom: 2rem;
+    }
+
+    .header-top ~ .page-title {
+        margin-top: -2rem;
+    }
+
+}
+.auth-dropdown .dropdown-menu {
+
+    border-radius: 0;
+    border: none;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.35);
+    min-width: 13rem;
+}
+
+.auth-dropdown .dropdown-item {
+    position: relative;
+    padding-left: 3rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    white-space: normal;
+}
+
+.auth-dropdown .dropdown-item .icon {
+    width: 1.5rem;
+    position: absolute;
+    left: 1rem;
+}
+.auth-dropdown .dropdown-login {
+    text-transform: uppercase;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: solid 1px #65afd9;
+    margin-bottom: 0;
+}
+
+.page-title .section-title {
+    padding: 10px 0;
+}
+header .breadcrumb {
+    border-bottom: solid 1px #aaa;
+    border-radius: 0;
+}

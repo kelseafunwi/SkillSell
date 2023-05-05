@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="icon-date-time-clock" transform="translate(-448.667 -584)">
+    <circle id="Ellipse_46" data-name="Ellipse 46" cx="8.958" cy="8.958" r="8.958" transform="translate(451.708 587.042)" fill="#3dadd9"/>
+    <g id="dashboard-control-gauge-measuring-amount" transform="translate(448.667 584)">
+      <path id="Path_575" data-name="Path 575" d="M13,1A12,12,0,1,0,25,13,12.014,12.014,0,0,0,13,1ZM5.587,21.119l1.049-1.048-.707-.707L4.88,20.412A10.957,10.957,0,0,1,2.013,13.5H3.5v-1H2.013A10.958,10.958,0,0,1,4.88,5.587L5.929,6.636l.707-.707L5.587,4.88A10.957,10.957,0,0,1,12.5,2.013V3.5h1V2.013A10.958,10.958,0,0,1,20.412,4.88L19.364,5.929l.707.707,1.049-1.049A10.957,10.957,0,0,1,23.987,12.5H22.5v1h1.487a10.958,10.958,0,0,1-2.867,6.912l-1.049-1.049-.707.707,1.049,1.049a10.978,10.978,0,0,1-14.825,0Z" transform="translate(-1 -1)"/>
+      <path id="Path_576" data-name="Path 576" d="M24.273,18.251a1,1,0,0,0-.26-.038,1.03,1.03,0,1,0,.976.754l4.958-4.958-.717-.717Z" transform="translate(-12.061 -7.181)"/>
+      <rect id="Rectangle_701" data-name="Rectangle 701" transform="translate(12 19.438)"/>
+      <rect id="Rectangle_702" data-name="Rectangle 702" width="3.042" transform="translate(13.473 19.438)"/>
+      <rect id="Rectangle_703" data-name="Rectangle 703" transform="translate(10.5 19.438)"/>
+    </g>
+  </g>
+</svg>

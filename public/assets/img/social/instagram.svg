@@ -1,0 +1,8 @@
+<svg id="instagram" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <rect id="Rectangle_935" data-name="Rectangle 935" width="32" height="32" fill="#2d63ac"/>
+  <ellipse id="Ellipse_42" data-name="Ellipse 42" cx="1.261" cy="1.261" rx="1.261" ry="1.261" transform="translate(20.448 9.044)" fill="#2d63ac"/>
+  <ellipse id="Ellipse_43" data-name="Ellipse 43" cx="3.071" cy="3.071" rx="3.071" ry="3.071" transform="translate(12.933 12.925)" fill="#2d63ac"/>
+  <path id="Path_1136" data-name="Path 1136" d="M160.02,176.9a4.11,4.11,0,1,0,4.11,4.11A4.11,4.11,0,0,0,160.02,176.9Zm0,6.481a2.373,2.373,0,1,1,2.373-2.373A2.373,2.373,0,0,1,160.02,183.381Z" transform="translate(-144.86 -164.322)" fill="#fff"/>
+  <path id="Path_1137" data-name="Path 1137" d="M110.691,119.91h-7.906a4.03,4.03,0,0,0-4.026,4.026v7.9a4.03,4.03,0,0,0,4.026,4.026h7.906a4.031,4.031,0,0,0,4.026-4.026v-7.9A4.031,4.031,0,0,0,110.691,119.91Zm2.294,11.932a2.291,2.291,0,0,1-2.288,2.288h-7.906a2.29,2.29,0,0,1-2.287-2.288v-7.906a2.29,2.29,0,0,1,2.287-2.288H110.7a2.291,2.291,0,0,1,2.288,2.288Z" transform="translate(-91.605 -111.179)" fill="#fff"/>
+  <ellipse id="Ellipse_44" data-name="Ellipse 44" cx="0.984" cy="0.984" rx="0.984" ry="0.984" transform="translate(23.115 7.067)" fill="#fff"/>
+</svg>

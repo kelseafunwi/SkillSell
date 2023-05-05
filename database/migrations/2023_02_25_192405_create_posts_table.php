@@ -14,7 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->integer('slug')->unique();
+            $table->longText('description')->nullable();
+            $table->unsignedBigInteger('postable_id')->nullable();
+            $table->string('postable_type')->nullable();
+            $table->string('type');
             $table->timestamps();
         });
     }

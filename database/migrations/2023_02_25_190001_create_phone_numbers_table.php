@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('phone_numbers', function (Blueprint $table) {
-            $table->id();
-            $table->integer('number');
+            $table->id()->autoIncrement();
+            $table->bigInteger('number');
             $table->timestamps();
         });
     }

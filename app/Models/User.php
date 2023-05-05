@@ -22,9 +22,23 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'firstname',
+        'lastname',
+        'occupation',
         'email',
+        'profile',
+        'status',
+        'step',
+        'role',
+        'last_seen',
+        'city_id',
+        'twitter',
+        'linkedin',
+        'whatsapp',
+        'role_class',
+        'fcm_token',
         'password',
+        'location'
     ];
 
     /**
@@ -47,11 +61,37 @@ class User extends Authenticatable
     ];
 
     // relationships
-    public function contacts() {
-        return $this->belongsToMany(Contact::class);
-    }
+    // public function contacts() {
+    //     return $this->belongsToMany(Contact::class);
+    // }
 
     public function phoneNumbers() {
-        return $this->hasManyThrough(PhoneNumber::class, Contact::class);
+        return $this->hasOne(PhoneNumber::class);
     }
+
+    public function city() {
+        return $this->belongsTo(City::class, 'city_id');
+    }
+
+    public function setting() {
+        return $this->hasOne(UserSetting::class);
+    }
+
+    public function connections() {
+        return $this->hasMany(Connection::class, 'user_id');
+    }
+
+    public function connectionRequests() {
+        return $this->hasMany(ConnectionRequest::class, 'user_id');
+    }
+
+    public function post() {
+        return $this->hasMany(Post::class, 'user_id');
+    }
+
+    public function reviews() {
+        return $this->hasMany(Rating::class, 'user_id');
+    }
+
+    
 }
