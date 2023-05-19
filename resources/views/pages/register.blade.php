@@ -14,21 +14,22 @@
 			<div class="row justify-content-md-center">
 				<div class="col-md-10 bg-dark">
 					<div class="card">
-						<form action="{{ route('register') }}" method="POST">
+						<form action="{{ route('register') }}" method="POST" enctype="multipart/form-data">
 							@csrf
 							<div class="card-body">
-								@if (session('message'))
-									<div class="alert alert-danger alert-dismissible">{{ session('message') }}</div>
-								@endif
+                                @if($errors->any())
+                                    <ul id="errors">
+                                        @foreach ($errors->all() as $error)
+                                            <div class="alert alert-danger alert-dismissible">{{ $error }}</div>
+                                        @endforeach
+                                    </ul>
+                                @endif
+
 								<div class="card-title">Admin Login Page</div>
 								<div class="card-text text-info">Enter your information here, this information will be added to your profile and will be viewed by people.</div>
 								<div class="row pt-3">
 									<div class="col-6">
-										<input type="text" class="form-control" value="{{ @session('firstname') ? @session('firstname') : "" }}" placeholder="First Name" name="firstname" required>
-									</div>
-
-									<div class="col-6">
-										<input type="text" class="form-control" placeholder="Last Name" name="lastname" required>
+										<input type="text" class="form-control" placeholder="Full Name" name="fullname" required>
 									</div>
 								</div>
 
@@ -58,13 +59,19 @@
 
                                 <div class="row pt-3">
 									<div class="col-8">
-										<input type="text" class="form-control" placeholder="Location" name="location" required>
+										<input type="text" class="form-control" placeholder="Location" name="location">
 									</div>
 								</div>
 
                                 <div class="row pt-3">
 									<div class="col-8">
-										<input type="text" class="form-control" placeholder="Phone Number" name="phone" required>
+										<input type="file" class="form-control" name="photo">
+									</div>
+								</div>
+
+                                <div class="row pt-3">
+									<div class="col-8">
+										<input type="text" class="form-control" placeholder="Phone Number" name="phone">
 									</div>
 								</div>
 
@@ -74,14 +81,6 @@
 										<input type="date" class="form-control" name="date_of_birth" required>
 									</div>
 								</div>
-
-								<div class="row pt-3">
-									{{-- <div class="col-8">
-										<label for="profile" class="text-dark">Profile Photo</label>
-										<input id="profile" type="file" class="form-control" placeholder="Input Profile" name="profile" required>
-									</div> --}}
-								</div>
-
 
 								<div class="row mt-3 justify-content-center">
 									<div class="col-md-4">

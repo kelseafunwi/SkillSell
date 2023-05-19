@@ -6,9 +6,10 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\PeopleController;
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
-use App\Http\Controllers\JobOfferController;
+use App\Http\Controllers\JobController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 
@@ -29,7 +30,7 @@ use App\Models\PhoneNumber;
 
 require __DIR__.'/auth.php';
 
-Route::get('/', [JobOfferController::class, 'index']);
+Route::get('/', [JobController::class, 'index']);
 
 Route::get('/team', function () {
     return view('pages.team');
@@ -57,26 +58,24 @@ Route::middleware('auth')->group(function ($user) {
     })->name('dashboard');
 
     // Peoples routes
-    Route::get('/people', function () {
-        $users = User::all();
-        $phone = PhoneNumber::all();
-        return view('people.index')->with('users', $users)->with('phone', $phone)   ;
-    });
+    Route::get('/people', [PeopleController::class, 'index']);
+    Route::get('/people/search', [PeopleController::class, 'search'])->where('search', '[A-Za-z]+');
 
     // Job Routes
-    Route::post('/joboffers/search', [JobOfferController::class, 'search']);
-    Route::get('/joboffers/categories', [JobOfferController::class, 'categories']);
-    Route::get('/dashboard', [JobOfferController::class, 'dashboard']);
-    Route::get('/joboffers', [JobOfferController::class, 'index']);
-    Route::get('/joboffers/create', [JobOfferController::class, 'create']);
-    Route::get('/joboffers/{id}', [JobOfferController::class, 'show']);
-    Route::post('/joboffers/{id}/delete', [JobOfferController::class, 'destroy']);
-    Route::post('/joboffers', [JobOfferController::class, 'store']);
-    Route::get('/joboffers/{id}/edit', [JobOfferController::class, 'edit']);
-    Route::post('/joboffers/{id}', [JobOfferController::class, 'update']);
+    Route::get('/jobs/search', [JobController::class, 'search'])->where('search', '[A-Za-z]+');
+    Route::get('/jobs/categories', [JobController::class, 'categories']);
+    Route::get('/dashboard', [JobController::class, 'dashboard']);
+    Route::get('/jobs', [JobController::class, 'index']);
+    Route::get('/jobs/create', [JobController::class, 'create']);
+    Route::get('/jobs/{id}', [JobController::class, 'show'])->where('id', '[0-9]+');
+    Route::post('/jobs/{id}/delete', [JobController::class, 'destroy'])->where('id', '[0-9]+');
+    Route::post('/jobs', [JobController::class, 'store']);
+    Route::get('/jobs/{id}/edit', [JobController::class, 'edit'])->where('id', '[0-9]+');
+    Route::post('/jobs/{id}', [JobController::class, 'update']);
 
     // Company Routes
     Route::get('/company/categories', [CompanyController::class, 'categories']);
+    Route::get('/company/search', [CompanyController::class, 'search'])->where('search', '[A-Za-z]+');
     Route::resource('/company', CompanyController::class);
 
     // Messages Routes
@@ -103,7 +102,7 @@ Route::middleware('auth')->group(function ($user) {
         });
     });
 
-    Route::get('/{id}/account', [PagesController::class, 'account']);
+    Route::get('/{id}/account', [PagesController::class, 'account'])->where('id', '[0-9]+');
 
     Route::get('/services', function () {
         return view('pages.services');
@@ -115,26 +114,27 @@ Route::middleware('auth')->group(function ($user) {
 
 
     Route::fallback([PagesController::class, 'home']);
+
+
+    // Settings
+    Route::get('/settings', 'SettingController@index')->name('settings');
+    Route::post('/settings', 'SettingController@store')->name('settings');
+
+
+    // Notifications
+    Route::get('/notifications', 'NotificationController@index')->name('notifications.index');
+    Route::get('/notifications/unread_count', 'NotificationController@unreadCount')->name('notifications.unread_count');
+    Route::get('/notifications/read_all', 'NotificationController@markAllRead')->name('notifications.read_all');
+    Route::get('/notifications/{id}', 'NotificationController@show')->name('notifications.show')
+        ->where('id', '[0-9]+');
+
+
+    // File Manager
+    Route::resource('files', 'FileManagerController');
 });
 
 
-// Settings
-Route::get('/settings', 'SettingController@index')->name('settings');
-Route::post('/settings', 'SettingController@store')->name('settings');
-
-
-// Notifications
-Route::get('/notifications', 'NotificationController@index')->name('notifications.index');
-Route::get('/notifications/unread_count', 'NotificationController@unreadCount')->name('notifications.unread_count');
-Route::get('/notifications/read_all', 'NotificationController@markAllRead')->name('notifications.read_all');
-Route::get('/notifications/{id}', 'NotificationController@show')->name('notifications.show');
-
-
-// File Manager
-Route::resource('files', 'FileManagerController');
-
-
-Route::group(['prefix' => 'api'], function () {
+Route::group(['prefix' => 'api', 'middleware' => 'auth'], function () {
     // posts
     Route::get('/posts', 'PostController@getNewsFeed')->name('newsfeed.fetch_posts');
     Route::post('/posts', 'PostController@createPost');
@@ -150,3 +150,9 @@ Route::group(['prefix' => 'api'], function () {
     Route::post('/comments', 'CommentController@createComment');
     Route::post('/comments/like-dislike', 'CommentController@likeDislike');
 });
+
+
+Route::get('backend/sales', function (AnalyticSales $analytics) {
+    return view('backend.sales-graph')->with(analytics);
+})->middleware('atuh');
+

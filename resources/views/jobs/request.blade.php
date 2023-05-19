@@ -4,14 +4,15 @@
 
 @section('title', 'Job Create')
 
-@section('job-active', 'active');
+
+@section('homepage-active', 'active')
 
 @section('page-link-name', "Website Information")
 
 @section('content')
     <!-- ======= Job Create Section ======= -->
     <section class="job-create vh-100" id="job-create">
-        <form action="/joboffers">
+        <form action="/jobs">
             <div class="container">
                 <div class="row">
                     <div class="col-10">
@@ -31,6 +32,6 @@
                     </div>
                 </div>
             </div>
-        </form>  
+        </form>
     </section>
 @endsection

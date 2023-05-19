@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateJobOfferRequest extends FormRequest
+class StoreJobPostRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,8 @@ class UpdateJobOfferRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'phone' => 'numeric',
+            'amount' => 'numeric',
         ];
     }
 }

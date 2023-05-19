@@ -30,8 +30,10 @@
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
                 <div class="icon-box">
                 <div class="icon"><i class="bx bx-file"></i></div>
-                <h4><a href="">Job Application</a></h4>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                <h4><a href="/">Job Application</a></h4>
+                <p>Apply for a job from any company, send resumes, talk on working conditions, salaary
+                    etc with as many people/companies as you want just with your mobile phone or computer.
+                </p>
                 </div>
             </div>
 
@@ -39,7 +41,7 @@
                 <div class="icon-box">
                 <div class="icon"><i class="bx bx-tachometer"></i></div>
                 <h4><a href="">Company Info</a></h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                <p>View Information about companies and find the right place for you to work</p>
                 </div>
             </div>
 
@@ -47,15 +49,22 @@
                 <div class="icon-box">
                 <div class="icon"><i class="bx bx-world"></i></div>
                 <h4><a href="">Get Training</a></h4>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                <p>
+                    You can get information from different learning platforms, teach online, Get a taxi
+                    And a whole lot of services on this platform, View information about internships from
+                    different organisations
+                </p>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
                 <div class="icon-box">
                 <div class="icon"><i class="bx bx-slideshow"></i></div>
-                <h4><a href="">Internship Dashboard</a></h4>
-                <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+                <h4><a href="">Finding a team for a job </a></h4>
+                <p>Make contracts with carpenters, builders, etc to carry out a project for you legally.
+                    our platform is also a place where you can invest on a lot of things and use your money
+                    to generate more money.
+                </p>
                 </div>
             </div>
 
@@ -63,7 +72,10 @@
                 <div class="icon-box">
                 <div class="icon"><i class="bx bx-arch"></i></div>
                 <h4><a href="">Network With Others</a></h4>
-                <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+                <p>
+                    We are gonna make your profile available to people and companies who need your services
+                    and get to network with a lot of people who share thesame interest as you.
+                </p>
                 </div>
             </div>
 

@@ -2,6 +2,8 @@
 
 @section('page-title', 'Counts')
 
+@section('homepage-active', 'active')
+
 @section('shouldLoginLinkDisplay', 'd-none')
 
 {{-- @section('about-active', 'active'); --}}
@@ -42,19 +44,19 @@
                 <div class="portfolio-info">
                     <h3>Job information</h3>
                     <ul>
-                    <li><strong>Title</strong>: {{ $jobOffer->title }}</li>  
-                    <li><strong>Phone</strong>: {{ $jobOffer->phone }}</li>
-                    <li><strong>Deadline</strong>: {{ $jobOffer->deadline }}</li>
-                    <li><strong>Project URL</strong>: <a href="#">{{ $jobOffer->website }}</a></li>
+                    <li><strong>Title</strong>: {{ $JobPost->title }}</li>
+                    <li><strong>Phone</strong>: {{ $JobPost->phone }}</li>
+                    <li><strong>Deadline</strong>: {{ $JobPost->deadline }}</li>
+                    <li><strong>Project URL</strong>: <a href="#">{{ $JobPost->website }}</a></li>
                     </ul>
                 </div>
                 <div class="portfolio-description">
-                    <h2>{{  $jobOffer->category }}</h2>
+                    <h2>{{  $JobPost->category }}</h2>
                     <p>
-                    {{ $jobOffer->details }}\
+                    {{ $JobPost->details }}\
 
-                    @if (Auth::id() == $jobOffer->creator_id)
-                        <a href="/joboffers/{{ $jobOffer->id }}/edit" class="my-4 btn btn-primary">Edit Job Information</a>
+                    @if (Auth::id() == $JobPost->creator_id)
+                        <a href="/jobs/{{ $JobPost->id }}/edit" class="my-4 btn btn-primary">Edit Job Information</a>
                     @endif
                     </p>
                 </div>

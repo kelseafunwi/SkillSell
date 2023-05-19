@@ -42,7 +42,7 @@
                 <div class="portfolio-info">
                     <h3>Job information</h3>
                     <ul>
-                    <li><strong>Title</strong>: {{ $jobOffer->title }}</li>  
+                    <li><strong>Title</strong>: {{ $jobOffer->title }}</li>
                     <li><strong>Phone</strong>: {{ $jobOffer->phone }}</li>
                     <li><strong>Deadline</strong>: {{ $jobOffer->deadline }}</li>
                     <li><strong>Project URL</strong>: <a href="#">{{ $jobOffer->website }}</a></li>
@@ -54,7 +54,7 @@
                     {{ $jobOffer->details }}\
 
                     @if (Auth::id() == $jobOffer->creator_id)
-                        <a href="/joboffers/{{ $jobOffer->id }}/edit" class="my-4 btn btn-primary">Edit Job Information</a>
+                        <a href="/jobs/{{ $jobOffer->id }}/edit" class="my-4 btn btn-primary">Edit Job Information</a>
                     @endif
                     </p>
                 </div>

@@ -18,12 +18,12 @@
             </div>
 
             <div class="container-fluid">
-                <form action="/people/search" method="POST">
+                <form action="/people/search" method="GET">
                     @csrf
                     <div class="row justify-content-center mx-auto">
                         <div class="col-md-8">
                             <div class="input-group" data-aos="fade-up">
-                                <input type="text" name="userSearch" class="form-control search-input" placeholder="Search For A User" value="{{ @session('searchvalue') ? @session('searchvalue') : "" }}">
+                                <input type="text" name="textField" class="form-control search-input" placeholder="Search For A User" value="@isset($searchValue) ? {{$searchValue}} @endisset">
                                 <button type="submit" data-aos="slide-left" class="btn btn-primary text-light">Search</button>
                             </div>
                         </div>
@@ -35,8 +35,8 @@
                 @foreach ($users as $user)
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                         <div class="img-box">
-                            <div class="image"><img src="/img/team/team-1.jpg" class="img-fluid" alt=""></div>
-                                <span>Name: </span><a class="text-primary" href="./people/{{ $user->id }}">{{ $user->firstname }} {{ $user->lastname }}</a><br />
+                            <div class="image"><img src="/storage{{$user->profile}}" class="img-fluid" alt=""></div>
+                                <span>Name: </span><a class="text-primary" href="./people/{{ $user->id }}">{{ $user->fullname }} {{ $user->lastname }}</a><br />
                                 <span>Email: </span><a class="text-primary" href="./people/1">{{ $user->email }}</a><br />
                                 <span>Occupation: </span><a class="text-primary" href="./people/1">{{ $user->occupation }}</a><br />
                                 <span>Rating: </span> <span><i class="bi text-warning bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></span><br />
@@ -45,6 +45,11 @@
                         </div>
                     </div>
                 @endforeach
+            </div>
+            <div class="row mt-2 justify-content-center text-center">
+                <div class="col-md-3 justify-content-center">
+                    {{ $users->links() }}
+                </div>
             </div>
 
         </div>

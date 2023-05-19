@@ -2,6 +2,8 @@
 
 @section('shouldLoginLinkDisplay', 'd-none')
 
+@section('homepage-active', 'active')
+
 @section('title', 'Job Create')
 
 @section('job-active', 'active');

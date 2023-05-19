@@ -18,8 +18,8 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $company = DB::table('companies')->get();
-        return view('company.index')->with('company', $company);
+        $company = Company::paginate(6);
+        return view('company.index')->with('companies', $company);
     }
 
     /**
@@ -31,7 +31,13 @@ class CompanyController extends Controller
     {
         return view('company.create');
     }
-    
+
+    public function search(Request $request) {
+        $text = $request->company;
+        $results = Company::where('company_name', 'like', '%'. $text . '%')->paginate(6);
+        return view('company.index')->with('companies', $results)->with('searchValue', $text);
+    }
+
     /**
      * Store a newly created resource in storage.
      *

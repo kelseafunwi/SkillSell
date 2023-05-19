@@ -41,6 +41,8 @@ class User extends Authenticatable
         'location'
     ];
 
+    protected $table = 'users';
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -93,5 +95,5 @@ class User extends Authenticatable
         return $this->hasMany(Rating::class, 'user_id');
     }
 
-    
+
 }

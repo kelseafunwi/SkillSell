@@ -17,3 +17,20 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
+
+
+Artisan::command(
+    'project:info',
+    function () {
+        echo "      -The name of this website is SkillSell, and its main aim is to help people \n
+            -find jobs from different companies online, Help companies hire the right staff,\n
+            -Help students find internships in their fields and get exposed to technology.\n";
+    }
+);
+
+Artisan::command(
+    'project:name',
+    function () {
+        echo "SkillSell\n";
+    }
+);

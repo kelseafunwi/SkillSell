@@ -4,24 +4,24 @@
 
 @section('title', 'Job Create')
 
-@section('job-active', 'active');
+@section('homepage-active', 'active')
 
 @section('page-link-name', "Website Information")
 
 @section('content')
     <!-- ======= Job Create Section ======= -->
     <section class="job-create" id="job-create">
-        <form action="/joboffers" method="POST">
+        <form action="/jobs" method="POST">
             @csrf
-            <div class="container mt-1">
-                <div class="section-title">
+            <div class="container mt-md-4">
+                <div class="mt-md-4 section-title">
                     <p>Job Creation Page</p>
                     <h2>Job Creation page</h2>
                 </div>
                 <div class="row justify-content-center offset-1 justify-content-between">
                     <div class="job-card d-flex">
                         <div class="col-md-2 d-flex align-items-center">
-                            <h3>Job Title</h3>
+                            <h3>Title</h3>
                         </div>
                         <div class="col-md-6">
                             <div class="input-form">
@@ -32,7 +32,7 @@
 
                     <div class="job-card d-flex">
                         <div class="col-md-2 mb-auto">
-                            <h3>Job Details</h3>
+                            <h3>Details</h3>
                         </div>
                         <div class="col-md-6">
                             <div class="input-form">

@@ -23,6 +23,7 @@ return new class extends Migration
             $table->integer('company_phone');
             $table->string('category');
             $table->string('taskID');
+            $table->integer('company_creator_id');
             $table->string('photoId')->nullable();
             $table->timestamps();
         });

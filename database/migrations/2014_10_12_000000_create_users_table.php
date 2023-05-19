@@ -15,18 +15,15 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('firstname');
-            $table->string('lastname');
-            $table->string('occupation');
-            $table->string('slug')->nullable();
+            $table->string('fullname');
+            $table->string('occupation')->nullable();
             $table->string('profile')->nullable();
             $table->string('email')->unique();
-            $table->longText('about')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('role', ['activator', 'needer', 'admin']);
-            $table->string('date_of_birth');
-            $table->string('location');
+            $table->string('date_of_birth')->nullable();
+            $table->string('location')->nullable();
             $table->longText('aboutyou')->nullable();
             $table->bigInteger('phone_id')->nullable();
             $table->enum('status', ['pending', 'active', 'suspended', 'rejected'])->default('active');

@@ -20,19 +20,19 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->text('experience')->nullable();
             $table->unsignedBigInteger('qualification_id')->nullable();
-            $table->unsignedBigInteger('job_type_id');
+            $table->unsignedBigInteger('job_type_id')->nullable();
             $table->timestamp('deadline');
-            $table->text('description');
-            $table->string('company_name');
-            $table->string('company_email');
+            $table->integer('phone');
+            $table->string('company_name')->nullable();
+            $table->string('company_email')->nullable();
             $table->string('company_logo')->nullable();
             $table->string('company_website')->nullable();
-            $table->unsignedBigInteger('city_id');
-            $table->unsignedBigInteger('sector_id');
-            $table->string('location');
-            $table->string('details');
+            $table->unsignedBigInteger('city_id')->nullable();
+            $table->unsignedBigInteger('sector_id')->nullable();
+            $table->string('location')->nullable();
+            $table->text('details');
             $table->integer('amount')->nullable();
-            $table->string('category');
+            $table->string('category')->default("Other");
             $table->timestamps();
         });
     }

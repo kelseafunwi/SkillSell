@@ -11,7 +11,7 @@
 @section('content')
     <!-- ======= Job Create Section ======= -->
     <section class="job-create" id="job-create">
-        <form action="/joboffers/{{ $jobOffer->id }}" method="POST">
+        <form action="/jobs/{{ $jobOffer->id }}" method="POST">
             @csrf
             <div class="container mt-1">
                 <div class="section-title">

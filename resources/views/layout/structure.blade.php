@@ -50,6 +50,7 @@
      <script src="/vendor/purecounter/purecounter_vanilla.js"></script>
 
     <script src="/js/main.js"></script>
+    <script src="/js/index.js"></script>
     <script>
         @yield('scripts-text')
     </script>
